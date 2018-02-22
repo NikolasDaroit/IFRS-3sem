@@ -1,53 +1,65 @@
-Exercício de revisão dos conteúdos já abordados na disciplina de Programação Estruturada e que serão necessários para o bom acompanhamento da disciplina de Estruturas de Dados. Realize a atividade seguindo as orientações e verifique suas dúvidas:
 
-Faça um programa para gerenciar um cadastro de um consultório médico. Seu programa deverá ter uma estrutura que armazene, para cada cliente, as seguintes informações:
+FaÃ§a um programa para gerenciar um cadastro de um consultÃ³rio mÃ©dico. Seu programa deverÃ¡ ter uma estrutura que armazene, para cada cliente, as seguintes informaÃ§Ãµes:
 
-? Nome;
+* Nome;
 
-? Sexo;
+* Sexo;
 
-? Data de nascimento;
+* Data de nascimento;
 
-? Idade;
+* Idade;
 
-? Doenças importantes;
+* DoenÃ§as importantes;
 
-Seu programa deve gerenciar estas informações através das seguintes opções do menu:
+Seu programa deve gerenciar estas informaÃ§Ãµes atravÃ©s das seguintes opÃ§Ãµes do menu:
 
-1. CADASTRAR CLIENTE: Seu programa deverá ter uma função responsável pelo cadastro
 
-de clientes. A cada seleção desta opção seu programa deverá cadastrar um novo cliente,
+##### 1. CADASTRAR CLIENTE: 
 
-cuidando para não exceder o tamanho de sua estrutura. Esta função deverá receber as
+Seu programa deverÃ¡ ter uma funÃ§Ã£o responsÃ¡vel pelo cadastro
 
-informações de cada cliente do usuário, com exceção da idade, que deverá ser calculada
+de clientes. A cada seleÃ§Ã£o desta opÃ§Ã£o seu programa deverÃ¡ cadastrar um novo cliente,
 
-dentro da função.
+cuidando para nÃ£o exceder o tamanho de sua estrutura. Esta funÃ§Ã£o deverÃ¡ receber as
 
-2. BUSCAR CLIENTE: Esta opção do menu deve chamar uma função que consulta se um
+informaÃ§Ãµes de cada cliente do usuÃ¡rio, com exceÃ§Ã£o da idade, que deverÃ¡ ser calculada
 
-determinado nome, informado pelo usuário, consta no cadastro. Se o nome não for
+dentro da funÃ§Ã£o.
 
-encontrado, uma mensagem deve ser repassada ao usuário, caso o cliente seja encontrado,
+
+##### 2. BUSCAR CLIENTE: 
+
+Esta opÃ§Ã£o do menu deve chamar uma funÃ§Ã£o que consulta se um
+
+determinado nome, informado pelo usuÃ¡rio, consta no cadastro. Se o nome nÃ£o for
+
+encontrado, uma mensagem deve ser repassada ao usuÃ¡rio, caso o cliente seja encontrado,
 
 deve ser informado o nome, sexo e idade deste paciente.
 
-3. LISTAR CLIENTES: O programa deverá apresentar TODAS as informações dos clientes
 
-cadastrados, através de uma função. Não deverão ser apresentadas informações vazias.
+##### 3. LISTAR CLIENTES: 
 
-4. EXCLUIR CLIENTE: Esta opção deverá chamar uma função responsável por excluir um
+O programa deverÃ¡ apresentar TODAS as informaÃ§Ãµes dos clientes
 
-cliente, cujo nome foi informado pelo usuário. Caso o nome do cliente não seja encontrado,
+cadastrados, atravÃ©s de uma funÃ§Ã£o. NÃ£o deverÃ£o ser apresentadas informaÃ§Ãµes vazias.
 
-uma mensagem deverá ser informada.
 
-Para desenvolver seu programa você deve seguir as orientações abaixo:
+##### 4. EXCLUIR CLIENTE: 
 
-? Não devem ser utilizadas variáveis globais.
+Esta opÃ§Ã£o deverÃ¡ chamar uma funÃ§Ã£o responsÃ¡vel por excluir um
 
-? Todas as informações necessárias pelas funções devem ser passadas como parâmetro.
+cliente, cujo nome foi informado pelo usuÃ¡rio. Caso o nome do cliente nÃ£o seja encontrado,
 
-? O usuário deverá poder utilizar seu programa, solicitando as opções tantas vezes quanto ele deseje e em qualquer ordem.
+uma mensagem deverÃ¡ ser informada.
 
-? Limite o número de cadastro de pacientes a 10. Após ocupados os 10 espaços para cadastro, seu programa não deve aceitar novas inserções, a menos que algum cadastro seja excluído.
+
+Para desenvolver seu programa vocÃª deve seguir as orientaÃ§Ãµes abaixo:
+
+* **NÃ£o devem ser utilizadas variÃ¡veis globais.**
+
+* **Todas as informaÃ§Ãµes necessÃ¡rias pelas funÃ§Ãµes devem ser passadas como parÃ¢metro.**
+
+* **usuÃ¡rio deverÃ¡ poder utilizar seu programa, solicitando as opÃ§Ãµes tantas vezes quanto ele deseje e em qualquer ordem.**
+
+* **Limite o nÃºmero de cadastro de pacientes a 10. ApÃ³s ocupados os 10 espaÃ§os para cadastro, seu programa nÃ£o deve aceitar novas inserÃ§Ãµes, a menos que algum cadastro seja excluÃ­do.**

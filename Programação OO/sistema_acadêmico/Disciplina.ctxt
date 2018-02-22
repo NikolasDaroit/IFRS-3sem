@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=Disciplina
+comment0.text=\r\n\ Escreva\ a\ descri\u00E7\u00E3o\ da\ classe\ Disciplina\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (n\u00FAmero\ de\ vers\u00E3o\ ou\ data)\r\n
+comment1.params=
+comment1.target=Disciplina()
+comment10.params=
+comment10.target=void\ getAlunos()
+comment11.params=aluno
+comment11.target=boolean\ addAluno(Aluno)
+comment2.params=text
+comment2.target=void\ print(java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getCurso()
+comment4.params=
+comment4.target=java.lang.String\ getProfessor()
+comment5.params=
+comment5.target=java.lang.String\ getNome()
+comment6.params=curso
+comment6.target=void\ setCurso(Curso)
+comment7.params=professor
+comment7.target=void\ setProfessor(Professor)
+comment8.params=nome
+comment8.target=void\ setNome(java.lang.String)
+comment9.params=
+comment9.target=int\ getTotal()
+numComments=12

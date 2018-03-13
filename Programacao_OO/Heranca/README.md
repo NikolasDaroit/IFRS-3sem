@@ -1,0 +1,6 @@
+Você precisa fazer um sistema para um robô fazedor de pizzas ele vai ter métodos genéricos para amassar a massa, levar ao fogo e etc. Você também deve poder adicionar ingredientes cada tipo de pizza deve possuir ordem dos ingredientes diferenciadas. Deve-se ter ao menos 4 tipos de pizza.
+Você deve implementar um sistema de pet Shop e cada pet vai ter comportamentos diferentes. Você deve ter uma superclasse que vai conter o tipo e características e métodos comuns como pedir comida. Você deve ter ao menos 3 tipos de pets diferentes 
+Você foi incumbido de desenvolver um jogo de estratégia online e deve modelar os tipos de unidades de guerra. Você tem unidades terrestre aéreas e aquáticas. Além disso você tem unidades que são pessoas e unidades que são máquinas. Você deve ter ao mínimo 3 níveis de herança e métodos distintos.
+Cada exercício deve ser enviado em uma pasta separada com o respectivo número do exercício cada classe deverá estar em um arquivo. Utilize o padrão java doc e gere a documentação das classes. 
+
+Para cada exercício crie uma classe de teste demonstrando que os objetos executam os métodos tanto da classe pai como os específicos das classes filha.

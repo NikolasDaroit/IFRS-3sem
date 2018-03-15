@@ -1,0 +1,17 @@
+//chave primária deve ser sublinhada ao inves de usar #
+
+Socio(#id, endereco, dt_nasc, matricula, nome)
+  Piloto(#cd_socio, breve)
+  cd_socio referencia Socio
+
+Instrutor(#cd_socio, cd_piloto, curso)
+  cd_socio referencia Socio
+  cd_piloto referencia Piloto
+
+Aluno(#cd_socio)
+  cd_socio referencia Socio
+
+Saida(#id, cd_instrutor, cd_aluno, hora_saida, hora_chegada, data, parecer)
+  cd_aluno referencia Aluno
+  cd_instrutor referencia Instrutor
+

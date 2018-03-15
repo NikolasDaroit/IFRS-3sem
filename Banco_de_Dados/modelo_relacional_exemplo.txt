@@ -1,0 +1,18 @@
+Publicacoes(codigo, autor, assunto, disponivel, palavra_chave,cd_genero, cd_prateleira, local)
+  cod_gen referencia Genero
+  cod_prat referencia Prateleira
+
+Colaborador(codigo, nome, cpg, cd_publicacao, data_emprestimo )
+
+Reservas(cd_publicacao, cd_colaborador)
+
+Devolução(data, cd_colaborador, cd_publicacao)
+  cd_colaborador referencia Colaborador
+  cd_publicacao referencia Publicacao
+
+
+Genero(codigo, nome)
+
+Prateleira(codigo, descricao, cd_genero)
+  cd_genero referencia Genero
+

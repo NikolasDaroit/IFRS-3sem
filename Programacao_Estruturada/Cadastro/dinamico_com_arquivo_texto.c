@@ -2,10 +2,10 @@
 #include <time.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
-#define n 2
 #define TAM_NOME  20
-#define TAM_DOENCA  50
+#define TAM_DOENCA  30
 
 typedef struct{
    int dia;
@@ -26,9 +26,10 @@ typedef struct{
 } Cliente;
 
 Cliente * cadastro;
-int total = -1;
+int total = 0 ;
+FILE *arqtxt;
 int menu(){
-    printf("\n1 criar clientes\n2 mostrar todos\n4 pesquisa por nome\n5 excluir por nome\n6 sair\n" );
+    printf("\n1 criar clientes\n2 mostrar todos\n3 pesquisa por nome\n4 excluir por nome\n5 salvar\n6 finalizar" );
     int op;
     scanf("%d",&op);
     return op;
@@ -40,25 +41,36 @@ void leia(char buffer[], int tamanho){
     buffer[strcspn(buffer, "\n")]=0;
     fflush(stdin);
 }
+void mostrar(Cliente c){
+    printf("\nNome %s\n", c.nome);
+    printf("Sexo %c\n", c.sexo);
+    printf("Dt. Nasc. %d/%d/%d (idade: %d)\n", c.datanasc.dia, c.datanasc.mes, c.datanasc.ano, idade(c.datanasc));
+    printf("doencas %s\n", c.doencas);
+}
 void cadastrar(){
     Cliente c;
     printf("nome: ");
     leia(c.nome, TAM_NOME);
-    printf("sexo: ");
-    scanf(" &c", &c.sexo);
-    c.sexo=toupper(c.sexo);
+    printf("sexo (m/f):");
+    scanf(" %c",&c.sexo);
+    getchar();
+    c.sexo=toupper(c.sexo);    
+    fflush(stdin);
     printf("dia: ");
-    scanf("%d", &c.datanasc.dia);
+    scanf("%i", &c.datanasc.dia);
+    fflush(stdin);
     printf("mes: ");
-    scanf("%d", &c.datanasc.mes);
+    scanf("%i", &c.datanasc.mes);
+    fflush(stdin);
     printf("ano: ");
-    scanf("%d", &c.datanasc.ano);
+    scanf("%i", &c.datanasc.ano);
     printf("doencas: ");
     leia(c.doencas, TAM_DOENCA);
     printf("finalizado!");
     mostrar(c);
-    cadastro = (Cliente *) realloc(cadastro, (total++)*sizeof(Cliente) );
+    cadastro = (Cliente *) realloc(cadastro, (total+1)*sizeof(Cliente) );
     cadastro[total] = c;
+    total++;
 }
 
 int idade(Data d){
@@ -70,130 +82,141 @@ int idade(Data d){
     return (int) (diff/10000);
 
 }
-int buscar(char nome[]);
-int criar_cliente(char *nome, char sexo, char *doencas);
-void mostrar_clientes();
-void excluir();
-
-void mostrar(Cliente c){
-    printf("Nome", c.nome);
-}
-int main(int argc, char const *argv[]){
-    int posicao = 0;
-    int k = 0;
-    int result;
-
-    while (k!=6){
-
-        FILE * fp;
-        char * line = NULL;
-        char palavra[100];
-
-        fp = fopen("cadastro.txt", "r");
-        if (fp == NULL){
-            fp = fopen("cadastro.txt", "wt");
-        }else{
-            while(!feof(fp)) {
-                fgets(palavra, 100, fp);
-                printf("%s", palavra);
-            }
-        }
-
-
-
-        fclose(fp);
-        if (line)
-            free(line);
-        exit(EXIT_SUCCESS);
-
-        printf("\n1 criar clientes\n2 mostrar todos\n4 pesquisa por nome\n5 excluir por nome\n6 sair\n" );
-        printf("Opcao... ");
-        scanf("%d", &k);
-        printf("\n");
-        char *nome="";
-        char sexo="";
-        char *doencas="";
-        switch ( k ){
-            case 1 :
-
-                result = criar_cliente(nome, sexo, doencas);
-                if (result == 1){
-                    printf("\nCadastro realizado com sucesso\n");
-
-                }else{
-                    printf("\nNão foi possível realizar este cadastro. Consulte o administrador do sistema.\n");
-                }
-
-                break;
-            case 2 :
-                mostrar_clientes();
-
-                break;
-            case 4 :
-                buscar("fulano-1");
-
-                break;
-            case 5 :
-                excluir(buscar("fulano-1"));
-
-        }
-    }
-}
-int criar_cliente(char *nome, char sexo, char *doencas){
-    int aux ;
-    for (aux=0;aux<n;aux++){
-        if (cadastro[aux].id == 0){
-            char buf[20];
-            sprintf(buf, "fulano-%d", aux);
-            strcpy(cadastro[aux].nome, buf);
-            strcpy(cadastro[aux].sexo, "fem");
-            strcpy(cadastro[aux].doencas, "asma");
-            //cadastro[aux].nascimento = 1011997;
-            cadastro[aux].idade = 21;
-            cadastro[aux].id = aux+1;
-            return 1;
-        }
-    }
-    return 0;
-
-    }
-void mostrar_clientes(){
-    int encontrado = 0;
-    int posicao;
-    for (posicao=0;posicao<n;posicao++){
-        if (cadastro[posicao].nascimento != 0 && cadastro[posicao].idade != 0){
-            printf("\nNome: %s\nSexo: %s\nDoencas: %s\nNascimento: %i\nIdade: %i\n", cadastro[posicao].nome, cadastro[posicao].sexo, cadastro[posicao].doencas, cadastro[posicao].nascimento, cadastro[posicao].idade);
-            encontrado = 1;
-        }
-    }
-    if (encontrado == 0){
-        printf("Nenhum cliente encontrado\n");
-    }
-}
-
-int buscar(char nome[]){
-    int encontrado = 0;
+void buscar(){
+    printf("nome");
+    char nome[TAM_NOME];
+    leia(nome, TAM_NOME);
     int i;
-    for (i=0;i<n;i++){
-        if (strcmp(cadastro[i].nome, nome) == 0){
-            printf("\nCliente encontrado: ");
-            printf("\nNome: %s\nSexo: %s\nIdade: %i\n\n", cadastro[i].nome, cadastro[i].sexo, cadastro[i].idade);
-            encontrado +=1 ;
-            return i;
+    for(i=0;i<total;i++){
+        if (strcmp(nome, cadastro[i].nome)==0){
+            mostrar(cadastro[i]);
+            return;
         }
     }
+    printf("cadastro nao encontrado");
+}
 
-    if (encontrado == 0){
-        printf("Cliente nao encontrado\n");
+
+void listar(){
+    int i;
+    for (i=0;i<total;i++){
+        printf("registro %d\n", i);
+        mostrar(cadastro[i]);
     }
-    return 0;
+}
+void excluir(){
+    printf("qual numero do registro a ser excluido");
+    int n,i;
+    scanf("%d", &n);
+    if (n>=0 && n < total){
+        for (i=n;i<total-1;i++){
+            cadastro[i]=cadastro[i+1];
+        }
+        total--;
+        cadastro = (Cliente *) realloc(cadastro, (total)*sizeof(Cliente) );
+    }else{
+        printf("codigo invalido");
+    }
+}
+void salvar(){
+    int l;
+    // FILE *arqtxt;
+    arqtxt = fopen("cadastro.txt", "wt");
+    fprintf(arqtxt, "%i\n", total);
+    for (l=0;l<total;l++){
+        printf("%d\n",l );
+        // printf("Total: %s\n", total);
+        fprintf(arqtxt, "%s\n", cadastro[l].nome);
+        fprintf(arqtxt, "%c\n", cadastro[l].sexo);
+        fprintf(arqtxt, "%d\n", cadastro[l].datanasc.dia);
+        fprintf(arqtxt, "%d\n", cadastro[l].datanasc.mes);
+        fprintf(arqtxt, "%d\n", cadastro[l].datanasc.ano);
+        fprintf(arqtxt, "%s", cadastro[l].doencas);
+    }
+    fclose(arqtxt);
+    return;
+}
+void carregar(){
+    char word[100];
+    int aux=0;
+    arqtxt = fopen("cadastro.txt", "rt");
+    fseek(arqtxt, 1, SEEK_SET);
+    while(!feof(arqtxt)) { 
+        Cliente c;
+        fscanf(arqtxt, "%s", &c.nome);
+        fscanf(arqtxt, "\n%c", &c.sexo);
+        fscanf(arqtxt, "\n%d", &c.datanasc.dia);
+        fscanf(arqtxt, "\n%d", &c.datanasc.mes);
+        fscanf(arqtxt, "\n%d", &c.datanasc.ano);
+        fscanf(arqtxt, "\n%s", &c.doencas);
+        aux++;
+        
+        cadastro = (Cliente *) realloc(cadastro, (total+1)*sizeof(Cliente) );
+        cadastro[total] = c;
+        total++;
+    }
+    
+    fclose(arqtxt);
+    return;
+}
+int main_opt(){
+    int op;
+    while(1){
+        op = menu();
+        switch (op){
+            case 1:
+                cadastrar();break;
+            case 2:
+                listar();break;
+            case 3:
+                buscar();break;
+            case 4:
+                excluir();break;
+            case 5:
+                salvar();
+                break;
+            case 6:
+                exit(0);
+        }
+    }
 }
 
-void excluir(int posicao){
-    strcpy(cadastro[posicao].nome, "");
-    strcpy(cadastro[posicao].sexo, "");
-    strcpy(cadastro[posicao].doencas, "");
-    cadastro[posicao].nascimento = 0;
-    cadastro[posicao].idade = 0;
-    cadastro[posicao].id = 0;
-}
+ int main() {
+     
+     char palavra[100];
+     again: arqtxt = fopen("cadastro.txt", "rt");
+     if (arqtxt == NULL) {
+        printf("Não foi encontrado arquivo. Criando...\n");
+        arqtxt = fopen("cadastro.txt", "wt");
+        fputs("0", arqtxt);
+        fclose(arqtxt);
+        goto again;
+     }else{
+         fseek(arqtxt, 0, SEEK_SET);
+         
+        fscanf(arqtxt, "%s", &palavra);
+
+        printf("Quantidade de registros %d\n",strcmp(palavra, "0") );
+        // quando da erro ele passa a ler como se tivessem 96 registros
+        if ((strcmp(palavra, "0")==96) ){
+
+            fclose(arqtxt);
+            int ret = remove("cadastro.txt");
+            printf("Arquivo com problema\n");
+            goto again;
+        }else{
+            if((strcmp(palavra, "0"))){
+                printf("Carregando cadastros do arquivo\n");
+                carregar();   
+            }
+                main_opt();
+        }
+        
+            
+        
+            
+         printf("Programa finalizado.\n");
+        
+     }
+     return 0;
+ }

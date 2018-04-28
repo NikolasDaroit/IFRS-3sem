@@ -40,7 +40,7 @@ List createList () {
 int printAll(List * l);
 void addLast(List * l, Node * n);
 void addFirst(List * l, Node * novo);
-int removePosition (List* l, int posicao);
+int removeAll (List* l, int valor);
 
 int main(){
   List lista;
@@ -50,12 +50,13 @@ int main(){
   addLast(&lista, &n1);
   n0 = createNode(33);
   addLast(&lista, &n0);
-  n2 = createNode(11);
-  addLast(&lista, &n2);
-  n3 = createNode(44);
-  addLast(&lista, &n3);
+  // n2 = createNode(11);
+  // addLast(&lista, &n2);
+  // n3 = createNode(44);
+  // addLast(&lista, &n3);
   
-  removePosition(&lista, 11);
+  removeAll(&lista, 22);
+  // removeAll(&lista, 33);
 
   printAll(&lista);
   printf("Ultimo valor: %d\n", lista.last->valor);
@@ -104,46 +105,47 @@ int printAll(List * l){
     }
     return count;
 }
-int removePosition (List* l, int posicao) {
-    int _remove (LinkedList* _this, int position) {
-    // list is empty
-    if (_this->size == 0) {
-        printf("LinkedList#_remove: The list is empty.");
-        system("PAUSE");
-        exit(0);
-    } else if (position >= _this->size) {
-        // out of bound
-        printf("LinkedList#_remove: Index out of bound");
-        system("PAUSE");
-        exit(0);
-    }
+int removeAll (List* l, int valor) {
+    Node* prev = l->first;
+    Node* node = l->first;
+    Node* next;
+    int i = 0;
+    do{
+        if (prev==node){
+            if (node->valor == valor){
+                if(node->next != NULL){
+                    l->first = node->next;  
+                    // free(node); 
+                }else{
 
-    // remove from head
-    if (position == 0) {
-        return _this->removeFirst(_this);
-    } else if (position+1 == _this->size) {
-        // remove from tail
-        return _this->removeLast(_this);
-    } else {
-        Node* node = _this->head;
-        Node* prev;
-        Node* next;
-        int i = 0, item;
-        // loop until position
-        while (i < position) {
-            node = node->next;
-            i++;
+                }
+            }
+
+        }else{
+            if (node->valor == valor){
+                if(node->next != NULL){
+                    
+                }
+            }
         }
-        item = node->item;
-        // remove node from list
-        prev = node->prev;
-        next = node->next;
-        prev->next = next;
-        next->prev = prev;
-        free(node);
-        _this->size--;
-        return node->item;
-    }
+        node = node->next;
+    }while(node->next != NULL);
+
+    // while (node != NULL){
+    //     prev = node;
+    //         printf("%d\n", node->valor);
+    //     if (node->valor == valor){
+    //         next = node->next;
+    //         prev->next = node->next;
+    //         // free(node);
+    //         l->size--;
+    //         i++;
+    //         node = next;
+
+    //     }
+        
+    // }
+    return i;
 }
 /*
 Implemente uma lista encadeada com as operações de criar, 

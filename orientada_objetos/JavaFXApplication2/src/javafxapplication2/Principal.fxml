@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication2.PrincipalController">
+    <children>
+        <Button fx:id="button" layoutX="48.0" layoutY="144.0" onAction="#handleButtonAction" text="Cadastrar" />
+        <Label fx:id="label" layoutX="37.0" layoutY="27.0" minHeight="16" minWidth="69" prefHeight="25.0" prefWidth="241.0" />
+      <Button fx:id="cavalo" layoutX="193.0" layoutY="121.0" mnemonicParsing="false" onAction="#trocaTela" text="Cavalo" />
+      <Button fx:id="dog" layoutX="252.0" layoutY="134.0" mnemonicParsing="false" onAction="#vaiDog" text="Dog" />
+      <Button fx:id="gato" layoutX="138.0" layoutY="108.0" mnemonicParsing="false" onAction="#vaiGato" text="Gato" />
+    </children>
+</AnchorPane>

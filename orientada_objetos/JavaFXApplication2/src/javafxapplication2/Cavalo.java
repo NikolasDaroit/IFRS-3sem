@@ -19,7 +19,12 @@ public class Cavalo extends Animal{
     public int getVelocidade() {
         return velocidade;
     }
-	public void emitirSom() {
-		System.out.println("imagine um relinchar");
-	}
+    public void emitirSom() {
+            System.out.println("imagine um relinchar");
+    }
+    
+    @Override
+    public String toString() {
+        return "Cavalo{Nome: " +this.nome+ " Peso: "+this.peso+" Velocidade: "+this.velocidade+"}";
+    }
 }

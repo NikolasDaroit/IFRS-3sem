@@ -7,6 +7,7 @@ package javafxapplication2;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -18,6 +19,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 
 /**
@@ -34,6 +36,12 @@ public class PrincipalController implements Initializable {
     private Button gato;
     @FXML
     private Button dog;
+    @FXML 
+    private ListView bichos;
+    
+    Pets p = new Pets();
+    
+    
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
@@ -114,6 +122,12 @@ public class PrincipalController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        
+        for (Animal animal : Pets.bicharada){
+            bichos.getItems().add(animal);
+            
+        }
+
         cavalo.setVisible(false);
         gato.setVisible(false);
         dog.setVisible(false);

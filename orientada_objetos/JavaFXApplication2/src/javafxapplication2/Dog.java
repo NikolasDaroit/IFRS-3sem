@@ -30,6 +30,10 @@ public class Dog extends Animal{
 	public void emitirSom() {
 		System.out.println("imagine um latido");
 	}
-
+        
+    @Override
+    public String toString() {
+        return "Dog{Nome: " +this.nome+ " Peso: "+this.peso+" Brabão: "+this.brabao+"}";
+    }
  
 }

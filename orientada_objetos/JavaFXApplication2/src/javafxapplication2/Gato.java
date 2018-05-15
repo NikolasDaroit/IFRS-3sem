@@ -30,6 +30,11 @@ public class Gato extends Animal{
 	public void emitirSom() {
 		System.out.println("imagine um miado");
 	}
+
+    @Override
+    public String toString() {
+        return "Gato{Nome: " +this.nome+ " Peso: "+this.peso+" Arranha: "+this.arranha+"}";
+    }
 	
 	
 }

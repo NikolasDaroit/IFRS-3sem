@@ -6,6 +6,8 @@
 package cadastrousuario;
 
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 import static javafx.application.ConditionalFeature.FXML;
@@ -74,7 +76,26 @@ public class CadastroUsuarioController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
+        
+        
         // TODO
     }    
+    public void insertUser(String nome, String email, String usuario, String senha, String reSenha){
+        Conexao c = new Conexao();
+        Connection dbConnection = c.getConexao();
+        String insertUserSql = "INSERT INTO usuariojava"
+                               +"(nome, email, usuario, senha, reSenha) VALUES"
+                               +"("+nome+","
+                               + ""+email+""
+                               + ""+usuario+""
+                               + ""+senha+""
+                               + ""+reSenha+");";
+        try {   
+           PreparedStatement ps = null; 
+           ps = dbConnection.prepareStatement(insertUserSql);
+            System.out.println(insertUserSql);
+        } catch (Exception e) {
+        }
+    }
     
 }

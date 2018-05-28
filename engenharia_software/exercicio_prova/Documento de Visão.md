@@ -1,0 +1,38 @@
+# Documento de Visão  
+
+## 2. Descrição do Problema
+
+O problema de|**Inconsistência entre registro de vagas de hotéis** 
+-------------|-------------------------------------
+afeta|**Cliente e Administrador**  
+cujo impacto é|**Insatisfação do cliente e prejuízo para o administrador, pois precisará lidar com a falha causada pela inconsistência.** 
+uma boa solução seria|**Ter um registro atualizado das vagas disponíveis**
+
+## 4. Descrição do Produto  
+
+Para| **Empresa de viagens contrantante**  
+----|------  
+Que | **Deseja melhor controle atualizado de vagas e reservas**   
+O   | **sistema em questão**   
+É um| **sistema de gerência de reservas**   
+Que | **possibilita o aluguel de hotéis, compra de pacotes de viagens e facilidades**   
+Ao contrário| **(dúvida) na prova, como vou identificar algum concorrente? Terá acesso à internet**   
+Nosso produto| **Fornece integração de ponta a ponta, dedsde a pesquisa até o acomponhamento da viagem, visando a satisfação do cliente.**   
+
+## 5. Necessidades e Funcionalidades do Produto  
+### 1. Cliente precisa reservar um pacote de viagem
+
+ - **Benefício**: Crítico.
+
+ - **Funcionalidades**:  
+    1. Escolher destino e período/Pacote 1.1
+      - Atores Envolvidos: Cliente
+    2. Escolher hotel e facilidaeds/Pacote 1.2
+      - Atores Envolvidos: Cliente
+## 7. Restrições  
+
+Restrições funcionais
+  - O sistema não poderá exibir dados de pagamento para outros usuários.
+  - O cliente não deve receber emails de viagens já canceladas.
+
+

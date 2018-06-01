@@ -8,9 +8,8 @@
 
 ## Fluxo Principal de Eventos:  
 P1. O Cliente solicita um pacote de viagem informando o destino e o período da viagem (data de ida e de volta).  
-P2. O sistema apresenta os hotéis e facilidades disponíveis para o destino e o período escolhido.[[RGN004](./Regras%20de%20negocio%20e%20mensagens.md#1-regras-de-negócio)] 
-P4. O sistema apresenta o valor total do pacote.    
-P3. O cliente seleciona os hotéis e as facilidades desejadas.[[RGN001](./Regras%20de%20negocio%20e%20mensagens.md#1-regras-de-negócio)] 
+P2. O sistema apresenta os hotéis e facilidades disponíveis para o destino e o período escolhido.[[RGN004](./Regras%20de%20negocio%20e%20mensagens.md#1-regras-de-negócio)]   
+P3. O cliente seleciona os hotéis e as facilidades desejadas.[[RGN001](./Regras%20de%20negocio%20e%20mensagens.md#1-regras-de-negócio)]   
 P4. O sistema apresenta o valor total do pacote.  
 P5. O sistema notifica o promotor de viagem por email.  
 P6. O cliente aceita o valor.  

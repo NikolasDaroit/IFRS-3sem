@@ -9,7 +9,7 @@ RGN002
 A compra do pacote de viagens pode ser cancelada até 72 horas antes do início do período.
 
 RGN003 
-O cliente não poderá receber mais de duas notificações por dia.
+O cliente não poderá receber mais de duas notificações do mesmo pacote de viagens por dia.
 
 RGN004 
 O cliente não pode agendar mais de uma viagem para o mesmo dia.

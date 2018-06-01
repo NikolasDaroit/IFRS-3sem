@@ -4,7 +4,7 @@
 **Tipo**: Concreto  
 **Atores**:  
  - *Primário*: Cliente.
- - *Secundário*: Cliente.
+ - *Secundário*: Promotor de viagem.
 
 ## Fluxo Principal de Eventos:  
 P1. O Cliente solicita um pacote de viagem informando o destino e o período da viagem (data de ida e de volta).  

@@ -16,8 +16,8 @@ Que | **Deseja melhor controle atualizado de vagas e reservas**
 O   | **Hotelator**   
 É um| **sistema de gerência de reservas**   
 Que | **possibilita o aluguel de hotéis, compra de pacotes de viagens e facilidades**   
-Ao contrário| **Trivago**   
-Nosso produto| **Fornece integração de ponta a ponta, desde a pesquisa até o acomponhamento da viagem, visando a satisfação do cliente.**   
+Ao contrário| **Trivago, sistema web que fornece a opção de encontrar o hotéis com desconto**   
+Nosso produto| **fornece integração de ponta a ponta, desde a pesquisa de preços dos hotéis até a adição de facilidades durante a viagem, visando a satisfação do cliente.**   
 
 ## 5. Necessidades e Funcionalidades do Produto  
 ### 1. Cliente precisa reservar um pacote de viagem

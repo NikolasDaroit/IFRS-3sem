@@ -5,7 +5,7 @@
 O problema de|**Falta da vaga reservada pelo cliente** 
 -------------|-------------------------------------
 afeta|**Cliente e Administrador**  
-cujo impacto é|**Perde de cliente e de credibilidade** 
+cujo impacto é|**Perda do cliente e de credibilidade do hotél** 
 uma boa solução seria|**Ter um registro atualizado das vagas disponíveis**
 
 ## 4. Descrição do Produto  
@@ -13,11 +13,11 @@ uma boa solução seria|**Ter um registro atualizado das vagas disponíveis**
 Para| **Empresa de viagens contrantante**  
 ----|------  
 Que | **Deseja melhor controle atualizado de vagas e reservas**   
-O   | **sistema em questão**   
+O   | **Hotelator**   
 É um| **sistema de gerência de reservas**   
 Que | **possibilita o aluguel de hotéis, compra de pacotes de viagens e facilidades**   
-Ao contrário| **(dúvida) na prova, como vou identificar algum concorrente? Terá acesso à internet**   
-Nosso produto| **Fornece integração de ponta a ponta, dedsde a pesquisa até o acomponhamento da viagem, visando a satisfação do cliente.**   
+Ao contrário| **Trivago**   
+Nosso produto| **Fornece integração de ponta a ponta, desde a pesquisa até o acomponhamento da viagem, visando a satisfação do cliente.**   
 
 ## 5. Necessidades e Funcionalidades do Produto  
 ### 1. Cliente precisa reservar um pacote de viagem

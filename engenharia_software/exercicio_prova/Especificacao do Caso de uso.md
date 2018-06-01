@@ -24,8 +24,8 @@ P12. O caso de uso se encerra.
 
 <a name="a1"/>    
 
-### A1. No passo 1 do fluxo principal o cliente seleciona mais de um destino.  
-A1.1. O cliente seleciona mais de um destino.  
+### A1. Selecionar mais de um destino.  
+A1.1. No passo 1 do fluxo principal o cliente seleciona mais de um destino.  
 A1.2. O sistema apresenta os hotéis e facilidades disponíveis para cada destino.  
 A1.3. O cliente seleciona os hotéis e facilidades para cada destino.  
 A1.4. O sistema retorna para o passo 4 do fluxo principal.  
@@ -35,7 +35,8 @@ A1.5. O caso de uso se encerra.
 
 <a name="e1"/>
 
-### E1. No passo 9 do fluxo principal o cliente não preenche corretamente os dados de pagamento.  
+### E1. Inserir dados de pagamento inválidos.  
+E1.1  No passo 9 do fluxo principal o cliente não preenche corretamente os dados de pagamento.  
 E1.1. O cliente confirma a compra com os dados de pagamento inválidos.   
 E1.2. O sistema notifica que os dados inseridos pelo cliente são inválidos.[[MSG001](./Regras%20de%20negocio%20e%20mensagens.md#2-mensagens-do-sistema)]    
 E1.3. O cliente altera os dados incorretos e confirma a compra.  

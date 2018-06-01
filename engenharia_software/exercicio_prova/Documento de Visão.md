@@ -27,10 +27,11 @@ Nosso produto| **Fornece integração de ponta a ponta, desde a pesquisa até o 
  - **Funcionalidades**:  
     1. Escolher destino e período/Pacote 1.1
       - Atores Envolvidos: Cliente
-    2. Escolher hotel e facilidaeds/Pacote 1.2
+    2. Escolher hotel e facilidades/Pacote 1.2
       - Atores Envolvidos: Cliente
-## 7. Restrições  
 
+
+## 7. Restrições  
 Restrições funcionais
   - O sistema não poderá exibir dados de pagamento para outros usuários.
   - O cliente não deve receber emails de viagens já canceladas.

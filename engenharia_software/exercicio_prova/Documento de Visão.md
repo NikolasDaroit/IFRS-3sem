@@ -2,10 +2,10 @@
 
 ## 2. Descrição do Problema
 
-O problema de|**Inconsistência entre registro de vagas de hotéis** 
+O problema de|**Falta da vaga reservada pelo cliente** 
 -------------|-------------------------------------
 afeta|**Cliente e Administrador**  
-cujo impacto é|**Insatisfação do cliente e prejuízo para o administrador, pois precisará lidar com a falha causada pela inconsistência.** 
+cujo impacto é|**Perde de cliente e de credibilidade** 
 uma boa solução seria|**Ter um registro atualizado das vagas disponíveis**
 
 ## 4. Descrição do Produto  

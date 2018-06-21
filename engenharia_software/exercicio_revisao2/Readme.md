@@ -71,45 +71,54 @@ O sistema não deve consumir mais que 100Mb de processamento.
   
 ## Especificação de caso de uso de cadastrar uma proposta de TCC  
   
+ CdU001 - Especificação do Caso de Uso  
   
+Resumo:   Aluno cadastra uma proposta de tcc, o orientador decide ou não aprovar
   
-mínimo de 6 passos no fluxo principal  
+Tipo:   Concreto
   
-2 fluxos alternativos  
+Atores: (Aluno), (Orientador)  
   
-CdU001 - Especificação do Caso de Uso  
+
   
-Resumo:   
+### Fluxo Principal de Eventos:  
   
-Tipo:   
+P1. O aluno se cadastra no sistema
   
-Atores: (Primário), (Secundário)  
+P2. O sistema verifica se o coordenador já definiu o cronograma de execução do TCC
   
+P3. O aluno cadastra a proposta de TCC
   
+P4. O aluno indica um orientador
   
-## Fluxo Principal de Eventos:  
+P5. O orientador aprova orientar este trabalho
+
+P6. O sistema notifica o aluno e o orientador
+
+P7. O caso de uso se encerra
   
-P1.   
+
+### Fluxos Alternativos:  
+ 
   
-P2.   
+A1 Cronograma não definido
   
-P3.   
+A1.1. No passo 2 do fluxo principal, o coordenador não definiu o cronograma de execução.  
+    
+A1.2. O sistema informa ao aluno que ainda não é possível cadastrar uma proposta de TCC.  
+
+A1.3. O caso de uso de encerra.
+ 
+
+A2 A proposta de TCC não é aprovada
   
-P4.   
+A2.1. No passo 5 do fluxo principal, o orientador não aprova a proposta de TCC.
   
+A3.2. O sistema então descarta a proposta de TCC.  
   
-  
-## Fluxos Alternativos:  
-  
-  
-  
-A1 Título do Fluxo  
-  
-A1.1. Passo do fluxo alternativo.  
-  
-A1.2. Passo do fluxo alternativo.  
-  
-A1.3. Passo do fluxo alternativo.  
+A4.3. O sistema permite que o aluno cadastre uma nova proposta de TCC.  
+
+A5.4. O caso de uso retorna para o passo 5 do fluxo principal.
   
   
   

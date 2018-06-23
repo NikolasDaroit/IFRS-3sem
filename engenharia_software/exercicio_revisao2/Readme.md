@@ -1,29 +1,3 @@
-# Definição do Sistema:   
-  
-Muitas atividades administrativas de uma instituição de ensino são processadas via sistema de informação, como os trabalhos de conclusão de curso.   
-No último ano do curso, alunos devem se cadastrar em um sistema para poder cadastrar uma proposta de TCC.   
-Antes de um aluno poder cadastrar sua proposta de TCC, o coordenador do curso deve definir um cronograma de execução do TCC a ser seguido por todos, que inclui as datas de definição de proposta, do seminário de andamento e da defesa final do trabalho.   
-Encerrado o período de inscrição dos trabalhos, o coordenador do curso, que também pode orientar trabalhos, define as bancas que avaliarão cada trabalho.   
-Quando o aluno cadastra sua proposta de TCC, ele deve obrigatoriamente indicar um orientador, sendo que este orientador deve explicitamente aprovar ser orientador deste trabalho.   
-Caso o orientador não aprove, a proposta de trabalho é descartada e o aluno deve submeter nova proposta.   
-Sempre que um aluno cadastrar uma proposta de TCC ou uma banca for definida, o sistema irá notificar todos os envolvidos (professores e alunos).   
-Quando o coordenador alterar o cronograma do TCC, esta notificação acontecerá opcionalmente para os usuários que assim solicitarem.   
-O trabalho de conclusão de curso consiste basicamente no aluno Entregar Trabalhos, sempre no formato PDF, que tem que ser um primeiramente um seminário de andamento e depois uma monografia final.   
-Para entregar o seminário, o aluno deve obrigatoriamente realizar três ações para apresentar a banca:   
-(1) uma pesquisa bibliográfica para a fundamentação teórica,   
-(2) um teste de viabilidade do seu projeto, que inclui algum experimento técnico e   
-(3) uma análise de mercado (que é opcional conforme decisão do orientador, mas deve ser uma ação prevista e discutida no artigo).  
-Quando as 3 ações estiverem concluídas, daí ele poderá começar a elaboração de um artigo de 4 páginas que sintetizará seu trabalho.  
-Após elaborar este artigo, o aluno deve submete-lo no sistema.   
-Após a submissão, será realizada uma apresentação, na qual a banca irá avaliar o trabalho e emitir um parecer para o orientador cadastrar no sistema.   
-Se for reprovado no seminário de andamento, o aluno deve refazer o artigo até ser aprovado.   
-Se aprovado, o aluno deve terminar de construir sua solução, escrever e submeter a monografia sua dentro do prazo estipulado.   
-Após submetido o trabalho, o aluno deverá apresentar para a banca.   
-A banca tem até 48h para passar um parecer final do trabalho como aprovado ou não para que o orientador possa submeter no sistema, bem como suas recomendações (semelhante ao processo de avaliação do seminário de andamento).   
-Se o aluno tira abaixo de 6 é reprovado, caso contrário, é aprovado.  
-Frente a isso, elabore os itens solicitados abaixo e submeta um documento .astah com os diagramas e os textos na resposta desta questão.  
-  
-  
   
 ## Descreva o produto acima conforme o Documento de visão.  
   
@@ -44,28 +18,12 @@ Frente a isso, elabore os itens solicitados abaixo e submeta um documento .astah
  Nosso produto **permite o agendamento completo de toda a rotina de TCC, validando e decidindo se é possível seguir para o próximo passo  
   
   
-  
 ## Especificação de 4 Requisitos Não Funcionais  
   
-O sistema deve ser responsivo.  
-Deve ser possível personalizar a cor do sistema para as cores da instituição.  
-As notificações deverão emitir som.  
-O sistema não deve consumir mais que 100Mb de processamento.  
-  
-  
-## Diagrama de Casos de Uso com todos estereótipos relacionados:   
-  
-  
-  
-1 caso de uso abstrato  
-  
-1 generalização de ator  
-  
-1 generalização de caso de uso  
-  
-1 extensão  
-  
-2 inclusões  
+RNF01. O sistema deve ser responsivo.  
+RNF02. Deve ser possível personalizar a cor do sistema para as cores da instituição.  
+RNF03. As notificações deverão emitir som.  
+RNF04. O sistema não deve consumir mais que 100Mb de processamento.  
   
   
   
@@ -78,8 +36,6 @@ Resumo:   Aluno cadastra uma proposta de tcc, o orientador decide ou não aprova
 Tipo:   Concreto
   
 Atores: (Aluno), (Orientador)  
-  
-
   
 ### Fluxo Principal de Eventos:  
   
@@ -120,7 +76,50 @@ A4.3. O sistema permite que o aluno cadastre uma nova proposta de TCC.
 
 A5.4. O caso de uso retorna para o passo 5 do fluxo principal.
   
+--
+
+# Diagramas constam no .astah
+ 
+
+# Definição do Sistema:   
   
+Muitas atividades administrativas de uma instituição de ensino são processadas via sistema de informação, como os trabalhos de conclusão de curso.   
+No último ano do curso, alunos devem se cadastrar em um sistema para poder cadastrar uma proposta de TCC.   
+Antes de um aluno poder cadastrar sua proposta de TCC, o coordenador do curso deve definir um cronograma de execução do TCC a ser seguido por todos, que inclui as datas de definição de proposta, do seminário de andamento e da defesa final do trabalho.   
+Encerrado o período de inscrição dos trabalhos, o coordenador do curso, que também pode orientar trabalhos, define as bancas que avaliarão cada trabalho.   
+Quando o aluno cadastra sua proposta de TCC, ele deve obrigatoriamente indicar um orientador, sendo que este orientador deve explicitamente aprovar ser orientador deste trabalho.   
+Caso o orientador não aprove, a proposta de trabalho é descartada e o aluno deve submeter nova proposta.   
+Sempre que um aluno cadastrar uma proposta de TCC ou uma banca for definida, o sistema irá notificar todos os envolvidos (professores e alunos).   
+Quando o coordenador alterar o cronograma do TCC, esta notificação acontecerá opcionalmente para os usuários que assim solicitarem.   
+O trabalho de conclusão de curso consiste basicamente no aluno Entregar Trabalhos, sempre no formato PDF, que tem que ser um primeiramente um seminário de andamento e depois uma monografia final.   
+Para entregar o seminário, o aluno deve obrigatoriamente realizar três ações para apresentar a banca:   
+(1) uma pesquisa bibliográfica para a fundamentação teórica,   
+(2) um teste de viabilidade do seu projeto, que inclui algum experimento técnico e   
+(3) uma análise de mercado (que é opcional conforme decisão do orientador, mas deve ser uma ação prevista e discutida no artigo).  
+Quando as 3 ações estiverem concluídas, daí ele poderá começar a elaboração de um artigo de 4 páginas que sintetizará seu trabalho.  
+Após elaborar este artigo, o aluno deve submete-lo no sistema.   
+Após a submissão, será realizada uma apresentação, na qual a banca irá avaliar o trabalho e emitir um parecer para o orientador cadastrar no sistema.   
+Se for reprovado no seminário de andamento, o aluno deve refazer o artigo até ser aprovado.   
+Se aprovado, o aluno deve terminar de construir sua solução, escrever e submeter a monografia sua dentro do prazo estipulado.   
+Após submetido o trabalho, o aluno deverá apresentar para a banca.   
+A banca tem até 48h para passar um parecer final do trabalho como aprovado ou não para que o orientador possa submeter no sistema, bem como suas recomendações (semelhante ao processo de avaliação do seminário de andamento).   
+Se o aluno tira abaixo de 6 é reprovado, caso contrário, é aprovado.  
+Frente a isso, elabore os itens solicitados abaixo e submeta um documento .astah com os diagramas e os textos na resposta desta questão.  
+  
+## Diagrama de Casos de Uso com todos estereótipos relacionados:   
+  
+  
+  
+1 caso de uso abstrato  
+  
+1 generalização de ator  
+  
+1 generalização de caso de uso  
+  
+1 extensão  
+  
+2 inclusões  
+    
   
 ## Diagrama de Atividades de todo o processo de submissão e aprovação do TCC, desde a proposta até a aprovação na disciplina, com todos estereótipos relacionados:   
   

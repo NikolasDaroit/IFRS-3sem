@@ -1,3 +1,5 @@
+## O código atual não passa por todos os testes, apenas por 50%  
+
 O programa já parcialmente pronto Implementa as funcionalidades de voltar e avançar de um navegador Web:
 
 * O usuário pode digitar tantas strings quantas desejar. A cada string que não for "BACK" ou "FORWARD", consideraremos como se esta string digitada fosse um site da Web. Sempre que isso acontecer, guarde o valor da variável "atual" no topo de uma pilha chamada "voltar" (apenas a partir do segundo site digitado), e substitua o valor da variável "atual" pelo endereço recém digitado. Além disso, esvazie a pilha "avancar".  

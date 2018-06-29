@@ -1,0 +1,29 @@
+{
+	"naturalPeople": [{
+		"id": "string",
+		"name": "string",
+		"federalTaxNumber": 0,
+		"email": "string",
+		"address": {
+			"country": "string",
+			"postalCode": "string",
+			"street": "string",
+			"number": "string",
+			"additionalInformation": "string",
+			"district": "string",
+			"city": {
+				"code": "string",
+				"name": "string"
+			},
+			"state": "string"
+		},
+		"birthDate": "2018-04-25T01:32:31.034Z",
+		"idNumber": "string",
+		"status": "Inactive",
+		"createdOn": "2018-04-25T01:32:31.034Z",
+		"modifiedOn": "2018-04-25T01:32:31.034Z"
+	}],
+	"totalResults": 0,
+	"totalPages": 0,
+	"page": 0
+}

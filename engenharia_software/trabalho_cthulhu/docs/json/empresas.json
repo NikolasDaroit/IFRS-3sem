@@ -1,0 +1,48 @@
+{
+	"companies": [{
+		"id": "string",
+		"name": "string",
+		"tradeName": "string",
+		"federalTaxNumber": 0,
+		"email": "string",
+		"address": {
+			"country": "string",
+			"postalCode": "string",
+			"street": "string",
+			"number": "string",
+			"additionalInformation": "string",
+			"district": "string",
+			"city": {
+				"code": "string",
+				"name": "string"
+			},
+			"state": "string"
+		},
+		"openningDate": "2018-04-25T01:32:56.642Z",
+		"taxRegime": "Isento",
+		"specialTaxRegime": "Automatico",
+		"legalNature": "EmpresaPublica",
+		"economicActivities": [{
+			"type": "Main",
+			"code": 0
+		}],
+		"companyRegistryNumber": 0,
+		"regionalTaxNumber": 0,
+		"municipalTaxNumber": "string",
+		"rpsSerialNumber": "string",
+		"rpsNumber": 0,
+		"environment": "Development",
+		"fiscalStatus": "CityNotSupported",
+		"certificate": {
+			"thumbprint": "string",
+			"modifiedOn": "2018-04-25T01:32:56.643Z",
+			"expiresOn": "2018-04-25T01:32:56.643Z",
+			"status": "Overdue"
+		},
+		"createdOn": "2018-04-25T01:32:56.643Z",
+		"modifiedOn": "2018-04-25T01:32:56.643Z"
+	}],
+	"totalResults": 0,
+	"totalPages": 0,
+	"page": 0
+}

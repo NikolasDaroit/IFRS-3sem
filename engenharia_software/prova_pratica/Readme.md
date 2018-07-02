@@ -53,6 +53,10 @@ Ao contrário *do Minhas Finanças(Banco do Brasil), sistema onde é possível v
 
 Nosso produto *permite gerenciar contas externas e cartões de crédito*
 
+**Feedback do professor Rodrigo Noll (DV)** |
+--- |
+DV (1.5/1.5): |
+
 # (1 ponto) 2. Especificação dos requisitos não funcionais referentes ao acrônimo UCPS. Inclua o que significa cada letra e o requisito especificamente para o sistema em questão. 
 
 ## Usabilidade  
@@ -68,6 +72,14 @@ Nosso produto *permite gerenciar contas externas e cartões de crédito*
 	* O sistema deverá rodar em dispositivos Android a partir da versao 4.
 
 
+**Feedback do professor Rodrigo Noll (Req.N.Func)** |
+--- |
+RNF (0.8/1.0): |
+ Usabilidade: |
+ Confiabilidade: |
+ Performance: |
+ Suportabilidade: não diz respeito a plataforma, mas como o software será mantido |
+ 
 # (1.5 pontos) 4. Especificação de caso de uso do caso de uso Gerenciar Despesa
 	* 1 fluxo alternativo com no mínimo 3 passos
 	* 	1 fluxo de exceção com no mínimo 3 passos
@@ -117,3 +129,47 @@ RN03: Se o usuário cadastrar uma categoria com o nome já existente, então o s
 Mensagens do Sistema:
 MSG01: Caro usuário, seu saldo se tornou negativo, atualmente você possui um limite de R$X,Y em sua conta.  
 MSG02: Renda cadastrada com sucesso, atualmente você possui R$X,Y em sua conta.  
+
+
+**Feedback do professor Rodrigo Noll (Esp.CdU)** |
+--- |
+Esp.CdU: Gerenciar Despesa (1.2/1.5): |
+1 fluxo alternativo com no mínimo 3 passos: o caso de uso é de despesa e não renda |
+1 fluxo de exceção com no mínimo 3 passos: |
+3 Regras de Negócio e 2 mensagens, todas significativas: |
+
+#### Feedback dos diagramas
+
+**Feedback do professor Rodrigo Noll (Diag.CdU)** |
+--- |
+Diag.CdU (1.8/2.0): gerenciar e criar conta deveriam ser o mesmo cdu |
+1 caso e uso abstrato por dependência: ok |
+2 generalizações de caso de uso: ok |
+1 extensão, com os respectivos estereótipos e notações: ok |
+1 inclusão: ok |
+
+**Feedback do professor Rodrigo Noll (Diag.Ativ)** |
+--- |
+Diagrama de Atividades: Gerenciar Renda (1.8/2.0): ao selecionar renda, vc incrementa o saldo (e teoricamente não pode ser negativo) |
+Call Behavior Action (com implementação): ok |
+Datastore: não é objeto |
+Parâmetro de atividade: não |
+Conectores: ok, mas não usado corretamente (envio de sinal é assinc) |
+Decisão e União (com estereótipos): ok |
+Nodo de Objeto : ok |
+Envio de Sinal: é assíncrono |
+Pino de Entrada: ok |
+Pino de Saída: ok |
+Partições: ok |
+
+**Feedback do professor Rodrigo Noll (Diag.MaqEst)** |
+--- |
+Diag.Estados: Renda:(1.5/2.0): negativa poderia virar positiva |
+4 estados: ok |
+1 estado composto: ok |
+1 atividade com ENTRY/EXIT: ok |
+2 transições internas parciais (2 das 3 partes): ok |
+1 nodo terminal: não |
+1 transição externa completa (3 partes): não |
+1 história profunda ou rasa, com nota apontando e explicando o motivo: não aponta para início |
+2 eventos de chamada, com nota apontando e explicando o motivo: ok |
